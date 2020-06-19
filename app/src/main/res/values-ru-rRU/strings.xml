@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Круговые тренировки</string>
+    <string name="text_instruction">Выполните упражнение,\nзатем нажмите кнопку \"ГОТОВО\"</string>
+    <string name="attempt">Завершено:</string>
+    <string name="done">готово </string>
+    <string name="end_relax">Закончить перерыв</string>
+    <string name="break_text">Перерыв:</string>
+    <string name="button_start">начать</string>
+    <string name="number_of_circles">Количество подходов:</string>
+    <string name="time_break">Время отдыха:</string>
+    <string name="toast_fail">Введите корректные данные!</string>
+    <string name="notify_text_">Выполните подход!</string>
+    <string name="notify_title">ОТДЫХ:</string>
+    <string name="work">ТРЕНИРОВКА:</string>
+</resources>

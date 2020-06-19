@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_attempt_label">24sp</dimen>
+    <dimen name="all_margin">8dp</dimen>
+    <dimen name="text_size_timer">150sp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="button_margin_top">28dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="counter_text_size">36sp</dimen>
+    <dimen name="counter_margin_bottom">32dp</dimen>
+    <dimen name="text_edittext_size">40sp</dimen>
+</resources>

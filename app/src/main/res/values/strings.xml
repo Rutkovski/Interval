@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Circular training</string>
+    <string name="count_work" translatable="false">%d/%d</string>
+    <string name="text_instruction">Complete the exercise,\nthen click \"COMPLETE\"</string>
+    <string name="format_timer" translatable="false">%2d:%02d</string>
+    <string name="format_timer_sek" translatable="false">%d</string>
+    <string name="attempt">Done:</string>
+    <string name="done">complete</string>
+    <string name="end_relax">complete the break</string>
+    <string name="test_timer_text" translatable="false">00:00</string>
+    <string name="break_text">Break:</string>
+    <string name="button_start">start</string>
+    <string name="number_of_circles">Total round:</string>
+    <string name="time_break">Break time:</string>
+    <string name="time_default_min" translatable="false">00</string>
+    <string name="time_default_sek" translatable="false">60</string>
+    <string name="time_delimiter" translatable="false">:</string>
+    <string name="attempt_default" translatable="false">5</string>
+    <string name="toast_fail">Enter the correct data!</string>
+    <string name="work">WORK:</string>
+    <string name="notify_text_">Complete set!</string>
+    <string name="notify_title">REST:</string>
+</resources>

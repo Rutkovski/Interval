@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Circular training</string>
-    <string name="count_work" translatable="false">%d/%d</string>
     <string name="text_instruction">Complete the exercise,\nthen click \"COMPLETE\"</string>
     <string name="format_timer" translatable="false">%2d:%02d</string>
     <string name="format_timer_sek" translatable="false">%d</string>
@@ -20,4 +19,14 @@
     <string name="work">WORK:</string>
     <string name="notify_text_">Complete set!</string>
     <string name="notify_title">REST:</string>
+
+    <string name="dialog_button_continue">continue</string>
+    <string name="dialog_button_complete">complete</string>
+    <string name="dialog_exit_title">Attention!</string>
+    <string name="dialog_exit_description">Do you really want to complete and exit?</string>
+    <string name="dialog_end_title">Congratulations!</string>
+    <string name="dialog_end_description">You did it!\nContinue or complete?</string>
+
+
+
 </resources>

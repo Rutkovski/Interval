@@ -36,7 +36,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/count_work"
+            android:text="0/0"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/counter_text_size"
             app:autoSizeTextType="uniform"

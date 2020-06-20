@@ -13,4 +13,12 @@
     <string name="notify_text_">Выполните подход!</string>
     <string name="notify_title">ОТДЫХ:</string>
     <string name="work">ТРЕНИРОВКА:</string>
+
+
+    <string name="dialog_button_continue">продолжить</string>
+    <string name="dialog_button_complete">завершить</string>
+    <string name="dialog_exit_title">Внимание!</string>
+    <string name="dialog_exit_description">Завершить и выйти?</string>
+    <string name="dialog_end_title">Поздравляем!</string>
+    <string name="dialog_end_description">Вы сделали это!\nПродолжить или завершить?</string>
 </resources>

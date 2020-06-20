@@ -167,6 +167,5 @@ public class TrainingActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         createDialog(0).show();
-        super.onBackPressed();
     }
 }

@@ -10,7 +10,6 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.CountDownTimer;
-import android.os.PowerManager;
 import android.os.Vibrator;
 
 import androidx.annotation.NonNull;
@@ -22,8 +21,6 @@ import androidx.lifecycle.MutableLiveData;
 import com.rutkovski.interval.R;
 
 import java.util.Locale;
-
-import static android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
 
 
 public class TrainingViewModel extends AndroidViewModel {
@@ -83,7 +80,8 @@ public class TrainingViewModel extends AndroidViewModel {
                     .setSmallIcon(R.drawable.ic_stat_name)
                     .setContentIntent(contentIntent)
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            .setOngoing(true);
+                    .setOngoing(true);
+
             createNotificationChannel();
             setAndShowNotifyBreak();
         }
@@ -109,7 +107,7 @@ public class TrainingViewModel extends AndroidViewModel {
         if (trainingTimer != null) {
             trainingTimer.cancel();
         }
-        if (notificationManager!=null){
+        if (notificationManager != null) {
             notificationManager.cancelAll();
         }
         if (soundPool != null) {
@@ -130,7 +128,36 @@ public class TrainingViewModel extends AndroidViewModel {
         }
     }
 
+    private void endTimerAlarm() {
+        soundPool.play(soundIdEndTimer, 1, 1, 1, 0, 1);
+        if (vibrator != null && vibrator.hasVibrator()) {
+            vibrator.vibrate(100);
+        }
+        setAndShowNotifyBreak();
+    }
 
+    private void setAndShowNotifyBreak() {
+        builder.setContentTitle(getApplication().getString(R.string.work))
+                .setContentText(getApplication().getString(R.string.notify_text_));
+        notificationManager.notify(NOTIFY_ID, builder.build());
+    }
+
+    private String getStringTime(long time) {
+        long secondsAll = time / 1000;
+        int second = (int) secondsAll % 60;
+        if (secondsAll > 59) {
+            int minute = (int) (secondsAll % 3600) / 60;
+            if (secondsAll > 3599) {
+                int hours = (int) secondsAll / 3600;
+                return String.format(Locale.getDefault(), "%d:%2d:%2d", hours, minute, second);
+            } else {
+                return String.format(Locale.getDefault(), getApplication().getString(R.string.format_timer), minute, second);
+            }
+
+        } else {
+            return String.format(Locale.getDefault(), getApplication().getString(R.string.format_timer_sek), second);
+        }
+    }
 
     public class TrainingTimer extends CountDownTimer {
         TrainingTimer(long millisInFuture, long countDownInterval) {
@@ -148,42 +175,6 @@ public class TrainingViewModel extends AndroidViewModel {
         public void onFinish() {
             isRunning.setValue(false);
             endTimerAlarm();
-
-        }
-    }
-
-    private void endTimerAlarm() {
-        soundPool.play(soundIdEndTimer, 1, 1, 1, 0, 1);
-
-        if (vibrator != null && vibrator.hasVibrator()) {
-            vibrator.vibrate(100);
-        }
-
-        setAndShowNotifyBreak();
-
-    }
-
-    private void setAndShowNotifyBreak(){
-            builder.setContentTitle(getApplication().getString(R.string.work))
-                    .setContentText(getApplication().getString(R.string.notify_text_));
-        notificationManager.notify(NOTIFY_ID, builder.build());
-    }
-
-
-    private String getStringTime(long time) {
-        long secondsAll = time / 1000;
-        int second = (int) secondsAll % 60;
-        if (secondsAll > 59) {
-            int minute = (int) (secondsAll % 3600) / 60;
-            if (secondsAll > 3599) {
-                int hours = (int) secondsAll / 3600;
-                return String.format(Locale.getDefault(), "%d:%2d:%2d", hours, minute, second);
-            } else {
-                return String.format(Locale.getDefault(), getApplication().getString(R.string.format_timer), minute, second);
-            }
-
-        } else {
-            return String.format(Locale.getDefault(), getApplication().getString(R.string.format_timer_sek), second);
         }
     }
 

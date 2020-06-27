@@ -27,6 +27,22 @@
     <string name="dialog_end_title">Congratulations!</string>
     <string name="dialog_end_description">You did it!\nContinue or complete?</string>
 
+    <array name="autosize_text_sizes">
+        <item>10sp</item>
+        <item>12sp</item>
+        <item>20sp</item>
+        <item>40sp</item>
+        <item>100sp</item>
+        <item>130sp</item>
+        <item>160sp</item>
+        <item>180sp</item>
+        <item>200sp</item>
+        <item>250sp</item>
+        <item>300sp</item>
+        <item>350sp</item>
+        <item>400sp</item>
+
+    </array>
 
 
 </resources>
